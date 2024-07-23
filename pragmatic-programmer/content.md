@@ -204,3 +204,109 @@ acostumbrarse a ello, pero, una vez que desarrolle el hábito, verá que su
 código se vuelve más limpio, sus funciones más cortas y sus diseños más
 planos. pagina 218
 
+La sabiduría popular dice que, una vez que un proyecto está en la fase de
+escritura del código, el trabajo es sobre todo mecánico, para transcribir el
+diseño como sentencias ejecutables. Nosotros creemos que esta actitud es la
+principal razón por la que fracasan los proyectos de software y muchos
+sistemas acaban siendo feos, ineficientes, con una estructura pobre,
+imposibles de mantener o, simplemente, que están mal.
+La escritura del código no es mecánica. Si lo fuese, las herramientas
+CASE en las que la gente depositó sus esperanzas a principios de los
+ochenta habrían reemplazado a los programadores hace mucho tiempo. Hay
+que tomar decisiones a cada minuto, decisiones que requieren una reflexión,
+cuidados y un buen criterio si se quiere que el programa resultante disfrute
+de una vida larga, productiva y precisa. 
+
+Los desarrolladores que no piensan de forma activa en
+su código están programando por casualidad; quizá el código funcione, pero
+no hay ninguna razón en particular para que lo hag
+pagina 264
+
+
+A veces, el código vuela desde el cerebro al editor: las ideas se
+convierten en bits sin esfuerzo aparente.
+Otros días, parece que el código va subiendo por una colina llena de
+barro. Cada paso requiere un esfuerzo tremendo y cada tres pasos
+retrocedemos dos. Pero, como es profesional, no afloja, sigue dando paso
+tras paso en el barro: tiene un trabajo que hacer. Por desgracia, es probable
+que eso sea justo lo contrario de lo que debería hacer.
+Su código está intentando decirle algo. Le está diciendo que esto es más
+difícil de lo que debería ser. Quizá la estructura o el diseño estén mal, tal
+vez está resolviendo el problema equivocado o puede que esté creando un
+millón de fallos. Sea cual sea el motivo, su cerebro reptiliano está sintiendo
+el feedback que envía el código y está intentando desesperadamente que lo
+escuche. pagina 266
+
+Programar por casualidad
+¿Alguna vez ve viejas películas bélicas en blanco y negro? El soldado
+agotado sale con cautela de la maleza. Hay un claro ante él: ¿está lleno de
+minas o es seguro cruzarlo? No hay nada que indique que es un campo de
+minas; no hay señales, ni alambradas ni cráteres. El soldado toca el suelo
+delante de él con su bayoneta y se encoge, esperando una explosión. No hay
+ninguna. Así que sigue avanzando con cuidado por el campo durante un
+rato, tocando y pinchando a medida que se mueve. Al final, convencido de
+que el terreno es seguro, se yergue y camina hacia delante con orgullo, hasta
+que vuela en pedazos.
+El sondeo inicial del soldado en busca de minas no había revelado nada,
+pero había sido solo suerte. Había llegado a una conclusión falsa, con
+consecuencias desastrosas.
+Como desarrolladores, también trabajamos en campos de minas. Hay
+cientos de trampas esperando para pillarnos cada día. Recordando la
+historia del soldado, deberíamos ser cautos a la hora de sacar falsas
+conclusiones. Deberíamos evitar programar por casualidad (depender de la
+suerte y los éxitos accidentales) y, en vez de eso, programar de forma
+deliberada. pagina 271
+
+
+Es fácil dejarse engañar por esta línea de pensamiento. ¿Por qué
+deberíamos correr el riesgo de enredar con algo que está funcionando?
+Bueno, se nos ocurren varias razones:
+■ Puede que en realidad no esté funcionado; tal vez solo lo parezca.
+■ La condición de contorno de la que dependemos puede ser solo un
+accidente. En circunstancias diferentes (una resolución de pantalla
+diferente, más núcleos de CPU), podría comportarse de manera
+distinta.
+■ Un comportamiento no documentado puede cambiar con el siguiente
+lanzamiento de biblioteca.
+■ Las llamadas adicionales e innecesarias ralentizan el código.
+■ Las llamadas adicionales incrementan el riesgo de introducir nuevos
+fallos propios. pagina 273
+
+
+A medida que evoluciona un programa, va haciéndose necesario
+replantearse decisiones anteriores y reelaborar porciones del código. Este
+proceso es perfectamente natural. El código necesita evolucionar; no es una
+cosa estática
+Martin Fowler define la refactorización en Refactoring [Fow19] como
+una:
+técnica disciplinada para reestructurar un cuerpo de código existente, alterando su estructura
+interna sin cambiar su comportamiento externo.
+
+Refactorizamos cuando hemos aprendido algo; cuando entendemos algo
+mejor de lo que lo hacíamos el año pasado, ayer o hace solo unos minutos.
+Quizá se haya encontrado con un obstáculo porque el código ya no
+encaja del todo, o se da cuenta de que hay dos cosas que, en realidad,
+deberían estar fusionadas, o cualquier otra cosa que le dé la sensación de
+estar “mal”; no dude en cambiarlo. No deje para mañana lo que pueda hacer
+hoy. Hay varias cosas que pueden hacer que un código sea un buen
+candidato a la refactorización:
+■ Duplicación: Ha descubierto una violación del principio DRY.
+■ Diseño no ortogonal: Ha descubierto algo que podría hacerse más
+ortogonal.
+■ Información desfasada: Las cosas cambian, los requisitos se
+desvían y su conocimiento del problema aumenta. El código necesita
+seguir el ritmo.
+■ Uso: A medida que personas reales en circunstancias reales van
+usando el sistema, se da cuenta de que ahora algunas características
+son más importantes de lo que había pensado en principio y
+características que parecían imprescindibles quizá no lo son.
+■ Rendimiento: Necesita pasar funcionalidad de un área del sistema a
+otra para mejorar el rendimiento.
+■ Las pruebas se pasan: Sí. En serio. Hemos dicho que la
+refactorización debería ser una actividad a pequeña escala, respaldada
+por pruebas buenas. Así pues, cuando ha añadido una pequeña
+cantidad de código y esa prueba extra se pasa, tiene una gran
+oportunidad de ponerse a limpiar lo que acaba de escribir.
+
+pagina 286
+
