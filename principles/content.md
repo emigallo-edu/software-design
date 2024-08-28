@@ -1,26 +1,26 @@
 Principio Abierto-Cerra (Open-Close Beltrand Meyer)
-    - Legibilidad
-        - Sencillez
-        - Autoexplicativo
-    - Cohesión
-        - Única Responsabilidad
-        - Experto en información
-        - Modularidad
-    - Acoplamiento
-        - Bajo Acoplamiento
-        - Inversión de Dependencias
-        - Polimorfismo
-        - Indirección
-        - Patrón invención pura
-        - Patrón controlador
-        - Patrón creador
-        - Ley Flexible y Estricta de Demeter
-        - Patrón Vista Separada
-    - Interfaz
-        - Principio de Sustitución de Liskov
-        - Principios del Menor Compromiso y la Menor Sorpresa
-        - Interfaz Suficiente, Completa y Primitiva
-        - Diseño por Contrato
+- Legibilidad
+    - Sencillez
+    - Autoexplicativo
+- Cohesión
+    - Única Responsabilidad
+    - Experto en información
+    - Modularidad
+- Acoplamiento
+    - Bajo Acoplamiento
+    - Inversión de Dependencias
+    - Polimorfismo
+    - Indirección
+    - Patrón invención pura
+    - Patrón controlador
+    - Patrón creador
+    - Ley Flexible y Estricta de Demeter
+    - Patrón Vista Separada
+- Interfaz
+    - Principio de Sustitución de Liskov
+    - Principios del Menor Compromiso y la Menor Sorpresa
+    - Interfaz Suficiente, Completa y Primitiva
+    - Diseño por Contrato
 
 ## Legibilidad
 > Una línea de código se escribe una vez y se lee cientos de veces
